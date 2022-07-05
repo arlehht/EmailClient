@@ -10,6 +10,7 @@ using System.IO;
 using System.Net;
 using MailKit.Net.Smtp;
 using MimeKit;
+using MailKit.Security;
 
 namespace EmailClient
 {
@@ -25,10 +26,13 @@ namespace EmailClient
             {
                 var client = new SmtpClient();
                 var msg = new MimeMessage();
-                foreach (String f in this.listArchivos.Items)
+                /*
+                 foreach (String f in this.listArchivos.Items)
                 {
-
+                    builder.Attachments.Add(@"C:UsersJoeyDocumentsparty.ics");
+                    message.Body = builder.ToMessageBody();
                 }
+                 */
                 if (rbGmail.Checked == true)
                 {
                     client.Connect("smtp.gmail.com", 465, true);
@@ -39,12 +43,23 @@ namespace EmailClient
                     msg.Body = new TextPart("plain")
                     {
                         Text = txtMensaje.Text
-                    };
+                };
                     client.Send(msg);
                     client.Disconnect(true);
                 }
                 if (rbHotmail.Checked == true)
                 {
+                    client.Connect("smtp.office365.com", 587, SecureSocketOptions.StartTls);
+                    client.Authenticate(this.txtRemitente.Text, this.txtPassword.Text);
+                    msg.From.Add(new MailboxAddress("", txtRemitente.Text));
+                    msg.To.Add(new MailboxAddress("", txtDestinatario.Text));
+                    msg.Subject = this.txtAsunto.Text;
+                    msg.Body = new TextPart("plain")
+                    {
+                        Text = txtMensaje.Text
+                    };
+                    client.Send(msg);
+                    client.Disconnect(true);
                 }
             }
             catch (Exception ex)
