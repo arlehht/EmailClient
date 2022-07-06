@@ -1,17 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using System.Net;
 using MailKit.Net.Smtp;
 using MimeKit;
 using MailKit.Security;
-
 namespace EmailClient
 {
     public partial class Form1 : Form
@@ -26,13 +15,6 @@ namespace EmailClient
             {
                 var client = new SmtpClient();
                 var msg = new MimeMessage();
-                /*
-                 foreach (String f in this.listArchivos.Items)
-                {
-                    builder.Attachments.Add(@"C:UsersJoeyDocumentsparty.ics");
-                    message.Body = builder.ToMessageBody();
-                }
-                 */
                 if (rbGmail.Checked == true)
                 {
                     client.Connect("smtp.gmail.com", 465, true);
@@ -66,15 +48,6 @@ namespace EmailClient
             {
                 MessageBox.Show(ex + " ");
             }    
-        }
-        private void btnAdjuntar_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog f = new OpenFileDialog();
-            if (f.ShowDialog()== DialogResult.OK)
-            {
-                String Archivos = f.FileName;
-                this.listArchivos.Items.Add(Archivos);
-            }
         }
     }
 }

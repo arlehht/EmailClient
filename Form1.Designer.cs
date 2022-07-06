@@ -40,8 +40,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnEnviarEmail = new System.Windows.Forms.Button();
-            this.listArchivos = new System.Windows.Forms.ListBox();
-            this.btnAdjuntar = new System.Windows.Forms.Button();
             this.rbGmail = new System.Windows.Forms.RadioButton();
             this.rbHotmail = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
@@ -50,7 +48,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 33);
+            this.label1.Location = new System.Drawing.Point(12, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(31, 20);
             this.label1.TabIndex = 0;
@@ -58,7 +56,7 @@
             // 
             // txtRemitente
             // 
-            this.txtRemitente.Location = new System.Drawing.Point(68, 33);
+            this.txtRemitente.Location = new System.Drawing.Point(68, 12);
             this.txtRemitente.Name = "txtRemitente";
             this.txtRemitente.Size = new System.Drawing.Size(350, 27);
             this.txtRemitente.TabIndex = 1;
@@ -66,7 +64,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 83);
+            this.label2.Location = new System.Drawing.Point(12, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 20);
             this.label2.TabIndex = 2;
@@ -74,7 +72,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(123, 76);
+            this.txtPassword.Location = new System.Drawing.Point(123, 54);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(295, 27);
             this.txtPassword.TabIndex = 3;
@@ -82,7 +80,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 125);
+            this.label3.Location = new System.Drawing.Point(12, 94);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 20);
             this.label3.TabIndex = 4;
@@ -90,9 +88,9 @@
             // 
             // txtDestinatario
             // 
-            this.txtDestinatario.Location = new System.Drawing.Point(130, 118);
+            this.txtDestinatario.Location = new System.Drawing.Point(123, 94);
             this.txtDestinatario.Name = "txtDestinatario";
-            this.txtDestinatario.Size = new System.Drawing.Size(288, 27);
+            this.txtDestinatario.Size = new System.Drawing.Size(295, 27);
             this.txtDestinatario.TabIndex = 5;
             // 
             // groupBox1
@@ -101,9 +99,9 @@
             this.groupBox1.Controls.Add(this.txtAsunto);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(31, 180);
+            this.groupBox1.Location = new System.Drawing.Point(12, 214);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(370, 338);
+            this.groupBox1.Size = new System.Drawing.Size(406, 368);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             // 
@@ -111,7 +109,7 @@
             // 
             this.txtMensaje.Location = new System.Drawing.Point(45, 122);
             this.txtMensaje.Name = "txtMensaje";
-            this.txtMensaje.Size = new System.Drawing.Size(297, 210);
+            this.txtMensaje.Size = new System.Drawing.Size(321, 210);
             this.txtMensaje.TabIndex = 3;
             this.txtMensaje.Text = "";
             // 
@@ -119,7 +117,7 @@
             // 
             this.txtAsunto.Location = new System.Drawing.Point(45, 53);
             this.txtAsunto.Name = "txtAsunto";
-            this.txtAsunto.Size = new System.Drawing.Size(297, 27);
+            this.txtAsunto.Size = new System.Drawing.Size(321, 27);
             this.txtAsunto.TabIndex = 2;
             // 
             // label5
@@ -142,7 +140,7 @@
             // 
             // btnEnviarEmail
             // 
-            this.btnEnviarEmail.Location = new System.Drawing.Point(502, 118);
+            this.btnEnviarEmail.Location = new System.Drawing.Point(180, 147);
             this.btnEnviarEmail.Name = "btnEnviarEmail";
             this.btnEnviarEmail.Size = new System.Drawing.Size(148, 61);
             this.btnEnviarEmail.TabIndex = 7;
@@ -150,29 +148,10 @@
             this.btnEnviarEmail.UseVisualStyleBackColor = true;
             this.btnEnviarEmail.Click += new System.EventHandler(this.btnEnviarEmail_Click);
             // 
-            // listArchivos
-            // 
-            this.listArchivos.FormattingEnabled = true;
-            this.listArchivos.ItemHeight = 20;
-            this.listArchivos.Location = new System.Drawing.Point(482, 200);
-            this.listArchivos.Name = "listArchivos";
-            this.listArchivos.Size = new System.Drawing.Size(188, 244);
-            this.listArchivos.TabIndex = 8;
-            // 
-            // btnAdjuntar
-            // 
-            this.btnAdjuntar.Location = new System.Drawing.Point(482, 463);
-            this.btnAdjuntar.Name = "btnAdjuntar";
-            this.btnAdjuntar.Size = new System.Drawing.Size(188, 57);
-            this.btnAdjuntar.TabIndex = 9;
-            this.btnAdjuntar.Text = "Adjuntar";
-            this.btnAdjuntar.UseVisualStyleBackColor = true;
-            this.btnAdjuntar.Click += new System.EventHandler(this.btnAdjuntar_Click);
-            // 
             // rbGmail
             // 
             this.rbGmail.AutoSize = true;
-            this.rbGmail.Location = new System.Drawing.Point(482, 64);
+            this.rbGmail.Location = new System.Drawing.Point(10, 184);
             this.rbGmail.Name = "rbGmail";
             this.rbGmail.Size = new System.Drawing.Size(69, 24);
             this.rbGmail.TabIndex = 10;
@@ -183,7 +162,7 @@
             // rbHotmail
             // 
             this.rbHotmail.AutoSize = true;
-            this.rbHotmail.Location = new System.Drawing.Point(566, 64);
+            this.rbHotmail.Location = new System.Drawing.Point(12, 147);
             this.rbHotmail.Name = "rbHotmail";
             this.rbHotmail.Size = new System.Drawing.Size(84, 24);
             this.rbHotmail.TabIndex = 11;
@@ -195,11 +174,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(735, 553);
+            this.ClientSize = new System.Drawing.Size(442, 612);
             this.Controls.Add(this.rbHotmail);
             this.Controls.Add(this.rbGmail);
-            this.Controls.Add(this.btnAdjuntar);
-            this.Controls.Add(this.listArchivos);
             this.Controls.Add(this.btnEnviarEmail);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtDestinatario);
@@ -209,7 +186,7 @@
             this.Controls.Add(this.txtRemitente);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Email Client";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -232,8 +209,6 @@
         private Label label4;
         private Button btnEnviarEmail;
         private MaskedTextBox maskedTextBox1;
-        private ListBox listArchivos;
-        private Button btnAdjuntar;
         private RadioButton rbGmail;
         private RadioButton rbHotmail;
     }
